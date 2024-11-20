@@ -6,6 +6,7 @@ test:
   image: python:3.10-slim
   script:
     - pip install hatch
-    - hatch test
+    - hatch test --cov
+  coverage: '/TOTAL.*?(\d+\%)$/'
   tags:
     - docker
