@@ -5,6 +5,9 @@ stages:
 test:
   stage: test
   image: python:3.10-slim
+  before_script:
+    - apt-get update
+    - apt-get install -y git
   script:
     - pip install hatch
     - hatch test --cover
