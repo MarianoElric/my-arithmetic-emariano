@@ -1,4 +1,5 @@
 stages:
+  - build
   - test
 
 test:
@@ -8,5 +9,31 @@ test:
     - pip install hatch
     - hatch test --cover
   coverage: '/TOTAL.*?(\d+\%)$/'
+  tags:
+    - docker
+
+build-on-tag:
+  stage: build
+  script:
+    - echo "my-arithmetic-emariano deployment on stable servers"
+    - pip install hatch hatch-vcs
+    - hatch build -t wheel
+    - hatch publish dist/*.whl
+    - ls dist/
+  rules:
+    - if: '$CI_COMMIT_TAG'
+  tags:
+    - docker
+
+build-on-develop:
+  stage: build
+  script:
+    - echo "my-arithmetic-emariano deployment on develop servers"
+    - pip install hatch hatch-vcs
+    - hatch build -t wheel
+    - hatch publish dist/*.whl
+    - ls dist/
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
   tags:
     - docker

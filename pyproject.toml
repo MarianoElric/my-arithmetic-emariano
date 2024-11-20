@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
@@ -32,7 +32,11 @@ Issues = "https://github.com/U.N. Owen/my-arithmetic-emariano/issues"
 Source = "https://github.com/U.N. Owen/my-arithmetic-emariano"
 
 [tool.hatch.version]
-path = "src/my_arithmetic_emariano/__about__.py"
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+version_scheme = "no-guess-dev"
+local_scheme = "no-local-version"
 
 [tool.hatch.envs.types]
 extra-dependencies = [
@@ -59,3 +63,4 @@ exclude_lines = [
   "if __name__ == .__main__.:",
   "if TYPE_CHECKING:",
 ]
+
