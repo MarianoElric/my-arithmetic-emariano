@@ -7,6 +7,6 @@ test:
   script:
     - pip install hatch
     - hatch test --cover
-  coverage: '/TOTAL.*? (100(?:\.0+)?\%\|[1-9]?\d(?:\.\d+)?\%)$/'
+  coverage: '/TOTAL.*?(\d+\%)$/'
   tags:
     - docker
