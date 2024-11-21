@@ -4,7 +4,21 @@
 
 
 def gcd(a, b):
-    """Calcule le plus grand commun diviseur de deux entiers a et b."""
+    """
+    Compute the greatest common divisor of two integers.
+
+    Parameters
+    ----------
+    a : int
+        First integer.
+    b : int
+        Second integer.
+
+    Returns
+    -------
+    int
+        The greatest common divisor of `a` and `b`.
+    """
     while b:
         a, b = b, a % b
     return a
