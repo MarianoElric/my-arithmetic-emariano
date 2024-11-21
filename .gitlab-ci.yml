@@ -17,6 +17,9 @@ test:
 
 build-on-tag:
   stage: build
+  before_script:
+    - apt-get update
+    - apt-get install -y git
   script:
     - echo "my-arithmetic-emariano deployment on stable servers"
     - pip install hatch hatch-vcs
@@ -30,6 +33,9 @@ build-on-tag:
 
 build-on-develop:
   stage: build
+  before_script:
+    - apt-get update
+    - apt-get install -y git
   script:
     - echo "my-arithmetic-emariano deployment on develop servers"
     - pip install hatch hatch-vcs
