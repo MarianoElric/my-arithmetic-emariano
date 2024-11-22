@@ -9,6 +9,8 @@
 
 - [Description](#description)
 - [Installation](#installation)
+- [Usage](#usage)
+- [Links](#links)
 - [License](#license)
 
 ## Description
@@ -39,19 +41,14 @@ Once you have completed the installation steps, you can start using this project
 
 1. Configure the GitLab Runner to connect to your GitLab instance.
 2. Customize the `.gitlab-ci.yml` file to define your desired pipeline stages and jobs.
-3. Customize the `Dockerfile` to specify the container environment for job execution.
-4. Push changes to the repository or manually trigger a pipeline run from the GitLab UI to execute the pipeline.
-
-## License
-
-This project is licensed under the MIT License. For more information, please refer to the [LICENSE](LICENSE) file.
+3. Push changes to the repository or manually trigger a pipeline run from the GitLab UI to execute the pipeline.
 
 
-## Installation
+## Links  
 
-```console
-pip install my-arithmetic-emariano
-```
+This repository is mirrored on GitHub and is available [here](https://github.com/MarianoElric/my-arithmetic-emariano).  
+
+The online documentation, generated using Sphinx and hosted on Read the Docs, is available [here](https://my-arithmetic-emariano.readthedocs.io/en/latest/).  
 
 ## License
 
